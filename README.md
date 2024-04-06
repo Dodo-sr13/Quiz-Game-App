@@ -27,4 +27,4 @@ If you encounter any issues or have any questions, please feel free to [create a
 
 ---
 
-Thank you for taking part in the Quiz Game. Happy quizzing! 🛒🚀
+Thank you for taking part in the Quiz Game. Happy quizzing!🚀
