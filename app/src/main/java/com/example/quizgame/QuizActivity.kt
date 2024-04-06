@@ -119,7 +119,6 @@ class QuizActivity : AppCompatActivity() {
                 quizBinding.textViewWrong.text = userWrong.toString()
                 findAnswer()
 
-
             }
 
             disableClickableOfOptions()

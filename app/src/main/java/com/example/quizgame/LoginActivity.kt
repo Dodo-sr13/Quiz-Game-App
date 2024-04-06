@@ -42,7 +42,7 @@ class LoginActivity : AppCompatActivity() {
         textofGoogleButton.textSize = 18F
 
 
-        registerActiviytForGoogleSignIn()
+        registerActivityForGoogleSignIn()
 
         loginBinding.buttonSignIn.setOnClickListener{
 
@@ -52,11 +52,13 @@ class LoginActivity : AppCompatActivity() {
             signInUser(userEmail,userPassword)
 
         }
+
         loginBinding.buttonGoogleSignIn.setOnClickListener{
 
             signInGoogle()
 
         }
+
         loginBinding.textViewSignUp.setOnClickListener{
 
             val intent = Intent(this,SignupActivity::class.java)
@@ -116,9 +118,6 @@ class LoginActivity : AppCompatActivity() {
         googleSignInClient = GoogleSignIn.getClient(this,gso)
 
         signIn()
-
-
-
     }
 
     private fun signIn(){
@@ -128,7 +127,7 @@ class LoginActivity : AppCompatActivity() {
 
     }
 
-    private fun registerActiviytForGoogleSignIn(){
+    private fun registerActivityForGoogleSignIn(){
 
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult(),
             ActivityResultCallback { result ->
@@ -159,8 +158,6 @@ class LoginActivity : AppCompatActivity() {
         }catch(e : ApiException){
             Toast.makeText(applicationContext,e.localizedMessage,Toast.LENGTH_SHORT).show()
         }
-
-
     }
 
     private fun firebaseGoogleAccount(account: GoogleSignInAccount){
